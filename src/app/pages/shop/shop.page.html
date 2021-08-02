@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Agregar Compra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img [src]="producto.imagen">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{producto.nombre}}</h2>
+      <h3>{{producto.precio}}</h3>
+    </ion-label>
+    <ion-button (click)="guardar(producto)">Comprar</ion-button>
+  </ion-item>
+
+</ion-content>

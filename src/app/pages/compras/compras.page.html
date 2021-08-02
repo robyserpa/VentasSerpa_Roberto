@@ -1,16 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Productos</ion-title>
+    <ion-title>Mis compras</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-item>
+    <ion-button (click)="llamar()">Llamar</ion-button>
+  </ion-item>
+
   <ion-searchbar
     showcancelbutton=""
     (ionInput)="filterList($event)"
   ></ion-searchbar>
   <div *ngFor="let p of productos | async">
-    <ion-item (click)="add(p)">
+    <ion-item>
       <ion-avatar slot="start">
         <img [src]="p.imagen">
       </ion-avatar>
